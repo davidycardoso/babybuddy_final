@@ -1,0 +1,78 @@
+/* Estilo básico para a página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do título */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #3a3a3a;
+}
+
+/* Contêiner para a lista de babás */
+.babysitter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Item de cada babá */
+.babysitter-item {
+    background-color: #f5f5f5; /* Fundo neutro (cinza claro) */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover para efeito de destaque */
+.babysitter-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem da babá */
+.babysitter-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Nome da babá */
+.babysitter-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4c4c4c;
+    margin: 10px 0;
+}
+
+/* Link para o perfil */
+.babysitter-item a {
+    text-decoration: none;
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Estilo do botão para ver as babás próximas */
+.babysitter-item a:hover {
+    color: #007bff; /* Azul para o link ao passar o mouse */
+}
+
+/* Mensagem para quando não encontrar babás */
+.no-babysitters {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 30px;
+}
