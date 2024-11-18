@@ -74,9 +74,9 @@ if (isset($_POST['register'])) {
             <!-- Campos adicionais para a babá -->
             <div id="babysitter_fields" style="display: none;">
                 <input type="file" name="photo" accept="image/*">
-                <input type="number" name="hourly_rate" placeholder="Taxa por hora" required>
-                <textarea name="qualifications" placeholder="Qualificações" required></textarea>
-                <textarea name="experience" placeholder="Experiência anterior" required></textarea>
+                <input type="number" name="hourly_rate" placeholder="Taxa por hora">
+                <textarea name="qualifications" placeholder="Qualificações"></textarea>
+                <textarea name="experience" placeholder="Experiência anterior"></textarea>
 
                 <!-- Latitude e Longitude serão preenchidos automaticamente -->
                 <input type="text" id="latitude" name="latitude" placeholder="Latitude" readonly>
@@ -98,10 +98,14 @@ if (isset($_POST['register'])) {
         document.querySelectorAll('input[name="user_type"]').forEach((radio) => {
             radio.addEventListener('change', function() {
                 const babysitterFields = document.getElementById('babysitter_fields');
+                const babysitterInputs = babysitterFields.querySelectorAll('input, textarea');
+
                 if (this.value === 'babysitter') {
                     babysitterFields.style.display = 'block';
+                    babysitterInputs.forEach(input => input.removeAttribute('required'));
                 } else {
                     babysitterFields.style.display = 'none';
+                    babysitterInputs.forEach(input => input.removeAttribute('required'));
                 }
             });
         });

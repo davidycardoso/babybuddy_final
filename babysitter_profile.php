@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'guardian') {
 
 // Verifica se o ID da babá foi passado na URL
 if (isset($_GET['babysitter_id'])) {
-    $babysitter_id = $_GET['babysitter_id'];
+    $babysitter_id = intval($_GET['babysitter_id']);
 
     // Consulta para buscar os detalhes da babá
     $sql = "SELECT * FROM babysitters WHERE id = ?";
@@ -22,11 +22,11 @@ if (isset($_GET['babysitter_id'])) {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $name = $row['name'];
-        $photo = $row['photo'];
-        $hourly_rate = $row['hourly_rate'];
-        $qualifications = $row['qualifications'];
-        $experience = $row['experience'];
+        $name = htmlspecialchars($row['name']);
+        $photo = htmlspecialchars($row['photo']);
+        $hourly_rate = is_numeric($row['hourly_rate']) ? floatval($row['hourly_rate']) : 0.00; // Converte ou define valor padrão
+        $qualifications = htmlspecialchars($row['qualifications']);
+        $experience = htmlspecialchars($row['experience']);
     } else {
         echo "Babá não encontrada.";
         exit;
@@ -50,7 +50,7 @@ if (isset($_GET['babysitter_id'])) {
 
     <div class="babysitter-profile">
         <!-- Exibe a foto da babá -->
-        <?php if ($photo && file_exists("uploads/" . $photo)) { ?>
+        <?php if (!empty($photo) && file_exists("uploads/$photo")) { ?>
             <img src="uploads/<?php echo $photo; ?>" alt="<?php echo $name; ?>" width="200" height="200">
         <?php } else { ?>
             <img src="default-avatar.jpg" alt="Imagem de <?php echo $name; ?>" width="200" height="200">
