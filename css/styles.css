@@ -1,0 +1,884 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f7fb; /* Cor suave, como céu claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner principal */
+.login-container {
+    background: #ffffff; /* Branco puro */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #e0e7ff; /* Bordas suaves */
+}
+
+/* Cabeçalho principal */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4c51bf; /* Azul suave, profissional */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Subtítulo */
+h2 {
+    font-size: 1.2rem;
+    color: #6c6c6c; /* Cinza suave */
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Campos de formulário */
+form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d7e6; /* Borda leve */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f4f9ff; /* Azul claro */
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4c51bf; /* Azul mais forte */
+    background-color: #ffffff;
+}
+
+/* Botão de envio */
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4c51bf; /* Azul principal */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #3a45a3; /* Azul mais escuro */
+}
+
+/* Links de opções (cadastro e esqueceu a senha) */
+.options {
+    margin-top: 20px;
+}
+
+.options p {
+    margin: 10px 0;
+}
+
+.options a {
+    color: #4c51bf;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #3a45a3;
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.error {
+    color: #e53e3e; /* Vermelho suave para erros */
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Adicionando ícones com fundo de símbolos infantis */
+.icon {
+    font-size: 50px;
+    color: #f6ad55; /* Laranja suave */
+    margin-bottom: 20px;
+}
+
+/* Estilo de responsividade */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form input, form .btn {
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f7fb; /* Cor suave, como céu claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner principal */
+.login-container {
+    background: #ffffff; /* Branco puro */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #e0e7ff; /* Bordas suaves */
+}
+
+/* Cabeçalho principal */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4c51bf; /* Azul suave, profissional */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Subtítulo */
+h2 {
+    font-size: 1.2rem;
+    color: #6c6c6c; /* Cinza suave */
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Campos de formulário */
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d7e6; /* Borda leve */
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f4f9ff; /* Azul claro */
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #4c51bf; /* Azul mais forte */
+    background-color: #ffffff;
+}
+
+/* Botão de envio */
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4c51bf; /* Azul principal */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #3a45a3; /* Azul mais escuro */
+}
+
+/* Links de opções (cadastro e esqueceu a senha) */
+.options {
+    margin-top: 20px;
+}
+
+.options p {
+    margin: 10px 0;
+}
+
+.options a {
+    color: #4c51bf;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #3a45a3;
+    text-decoration: underline;
+}
+
+/* Mensagem de erro */
+.error {
+    color: #e53e3e; /* Vermelho suave para erros */
+    margin: 15px 0;
+}
+
+/* Estilo básico do container do dashboard */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Informações da Babá */
+.babysitter-info {
+    flex: 1 1 calc(100% - 20px);
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 2px solid #E3E3E3; /* borda para melhor contraste */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Resumo Rápido */
+.summary {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Notificações */
+.notifications {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0069d9; /* Cor azul igual do login */
+    color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Avaliações */
+.reviews {
+    flex: 1 1 calc(30% - 20px);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745; /* Cor verde igual do login */
+    color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #218838;
+}
+
+/* Propostas Link */
+.proposals-link {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Cor azul claro igual do login */
+    color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+
+/* Botões de Editar Perfil e Logout */
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-edit, .btn-logout {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit {
+    background-color: #28a745; /* Verde */
+    color: #FFF;
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-logout {
+    background-color: #dc3545; /* Vermelho */
+    color: #FFF;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Container das propostas */
+.proposals-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Título */
+.proposals-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Botões de ação */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+/* Estilo de alerta se não houver propostas */
+table td[colspan="4"] {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+/* Estilo para links e botões de ação */
+a {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para a navegação de ações */
+a {
+    margin-left: 10px;
+}
+
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.proposal-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-accept {
+    background-color: #28a745;
+}
+
+.btn-accept:hover {
+    background-color: #218838;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+}
+
+.btn-complete {
+    background-color: #ffc107;
+}
+
+.btn-complete:hover {
+    background-color: #e0a800;
+}
+
+.messages {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.message {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message p {
+    margin: 0;
+    color: #333;
+}
+
+.message-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.message-form button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.message-form button:hover {
+    background-color: #0056b3;
+}
+
+.message-form textarea:focus,
+.message-form button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+}
+
+/* Container principal das avaliações */
+.reviews-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.reviews-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Média de avaliação */
+.average-rating {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.average-rating h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.average-rating p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para as estrelas */
+.star {
+    color: #d3d3d3;
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.star.filled {
+    color: #f39c12; /* Cor das estrelas preenchidas */
+}
+
+/* Lista de avaliações */
+.reviews-list {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.review {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.review p {
+    margin-bottom: 10px;
+}
+
+.review p strong {
+    font-weight: bold;
+}
+
+.review .star {
+    color: #f39c12;
+}
+
+.review .review-date {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Seção de mensagem caso não haja avaliações */
+.reviews-list p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Resetando margens e padding para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container do dashboard */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do dashboard */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos botões */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 5px;
+}
+
+/* Botões personalizados */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Container de links */
+.mt-3 {
+    margin-top: 20px;
+}
+
+/* Resposta de erro ou sucesso */
+.alert {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+

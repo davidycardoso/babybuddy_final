@@ -1,0 +1,384 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;  /* Desloca as links para a direita */
+}
+
+header .nav-links li {
+    font-size: 1.2em;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Botões de Login e Cadastro à esquerda */
+header .auth-buttons {
+    display: flex;
+    gap: 20px;
+    margin-right: auto;  /* Desloca os botões para a esquerda */
+}
+
+header .btn-login,
+header .btn-cadastrar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+}
+
+header .btn-login:hover,
+header .btn-cadastrar:hover {
+    background-color: #45a049;
+}
+
+/* Seção Hero - Slideshow */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #45a049;
+}
+
+/* Barra de progresso */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.progress-bar.active {
+    background-color: #4CAF50;
+}
+
+/* Seções Gerais */
+section {
+    padding: 40px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Seção Sobre */
+#about {
+    background-color: #ffffff;
+}
+
+#about h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#about ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Equipe */
+.team {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Seção Serviços */
+#services {
+    background-color: #f9f9f9;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1.2em;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.benefits-list li {
+    font-size: 1.2em;
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+/* Seção Depoimentos */
+#testimonials {
+    background-color: #ffffff;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.testimonial-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.testimonial-content p {
+    font-size: 1.1em;
+}
+
+/* Seção Contato */
+#contact {
+    background-color: #f9f9f9;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+}
+
+#contact button:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Seção Portfólio */
+#portfolio {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.portfolio-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1.2em;
+}

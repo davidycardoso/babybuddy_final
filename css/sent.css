@@ -1,0 +1,66 @@
+/* Estilo do botão de Voltar para o Dashboard */
+.back-to-dashboard {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espaço abaixo do botão */
+}
+
+.back-to-dashboard:hover {
+    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do container do dashboard */
+.dashboard-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo da tabela de propostas */
+.dashboard-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.dashboard-container th, .dashboard-container td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.dashboard-container th {
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+.dashboard-container td {
+    background-color: #fafafa;
+}
+
+.dashboard-container a.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-container a.btn:hover {
+    background-color: #0056b3;
+}
