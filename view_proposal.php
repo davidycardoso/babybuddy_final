@@ -76,17 +76,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['message'])) {
     $message = trim($_POST['message']);
     if (!empty($message)) {
         $sender_id = $_SESSION['user_id'];
+<<<<<<< HEAD
+        $receiver_id = $proposal['guardian_id'];
+
+        $message_sql = "
+            INSERT INTO messages (proposal_id, sender_id, receiver_id, message)
+=======
         $recipient_id = $proposal['guardian_id'];
 
         $message_sql = "
             INSERT INTO messages (proposal_id, sender_id, recipient_id, message)
+>>>>>>> 2c5834b71f4051517d4af26e3ace3280b31c7b97
             VALUES (?, ?, ?, ?)
         ";
         $message_stmt = $conn->prepare($message_sql);
         if ($message_stmt === false) {
             die("Erro ao preparar a consulta para mensagens: " . $conn->error);
         }
+<<<<<<< HEAD
+        $message_stmt->bind_param("iiis", $proposal_id, $sender_id, $receiver_id, $message);
+=======
         $message_stmt->bind_param("iiis", $proposal_id, $sender_id, $recipient_id, $message);
+>>>>>>> 2c5834b71f4051517d4af26e3ace3280b31c7b97
         if ($message_stmt->execute()) {
             header("Location: view_proposal.php?id=" . $proposal_id);
             exit();

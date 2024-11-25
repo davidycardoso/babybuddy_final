@@ -41,6 +41,22 @@ CREATE TABLE proposals (
 );
 
 -- Tabela de Messages
+<<<<<<< HEAD
+CREATE TABLE `messages` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `proposal_id` int DEFAULT NULL,
+    `sender_id` int DEFAULT NULL,
+    `sender_type` enum('babysitter', 'guardian') DEFAULT NULL,
+    `receiver_id` int DEFAULT NULL,
+    `receiver_type` enum('babysitter', 'guardian') DEFAULT NULL,
+    `message` text,
+    `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    KEY `proposal_id` (`proposal_id`),
+    CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`proposal_id`) REFERENCES `proposals` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+=======
 CREATE TABLE messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     sender_id INT,
@@ -53,6 +69,7 @@ CREATE TABLE messages (
     FOREIGN KEY (receiver_id) REFERENCES babysitters(id),
     FOREIGN KEY (proposal_id) REFERENCES proposals(id)
 );
+>>>>>>> 2c5834b71f4051517d4af26e3ace3280b31c7b97
 
 -- Tabela de Responses
 CREATE TABLE responses (
@@ -90,4 +107,8 @@ CREATE TABLE reviews (
 ALTER TABLE proposals
 MODIFY COLUMN status ENUM('pendente', 'aceita', 'rejeitada', 'em_andamento', 'concluida') DEFAULT 'pendente';
 
+<<<<<<< HEAD
+ALTER TABLE messages CHANGE sender_type sender_type ENUM('babysitter', 'guardian');
+=======
+>>>>>>> 2c5834b71f4051517d4af26e3ace3280b31c7b97
 
